@@ -1,8 +1,9 @@
 {{ partial "header.html" . }}
 <section class="article-list">
-  <h1>{{ .Title }}</h1>
-  {{ range .Data.Pages }}
+  {{ range $index, $page := .Data.Pages }}
+  {{ if ne $index 0 }}
   <hr/>
+  {{ end }}
   {{ .Render "li" }}
   {{ end }}
 </section>
