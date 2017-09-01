@@ -1,9 +1,11 @@
-# Vienna
+# hugo-unxp
 
 ## Overview
 
+hugo-unxp theme is a fork of Vienna but adapted to unxp.fr
+
 Vienna is a simple and clean blog theme for [Hugo](http://gohugo.io/).
-Notable features are:
+Vienna features are:
 
 - Simple and clean design
 - Client side source code highlighting
@@ -20,10 +22,8 @@ In your hugo site directory, run:
 ```shell
 $ mkdir themes
 $ cd themes
-$ git clone https://github.com/keichi/vienna
+$ git clone https://github.com/abdel-unxp/hugo-theme-unxp
 ```
-
-Vienna is also included in the `spf13/hugoThemes` repository.
 
 ## Configuration
 
@@ -65,10 +65,10 @@ copyright = "&copy; Copyright notice"
 
 ## Usage
 
-Use hugo's `-t vienna` or `--theme=vienna` option with hugo commands.
+Use hugo's `-t unxp` or `--theme=hugo-theme-unxp` option with hugo commands.
 Example:
 
 ```shell
-$ hugo server -t vienna -w -D
+$ hugo server -t hugo-theme-unxp -w -D
 ```
 

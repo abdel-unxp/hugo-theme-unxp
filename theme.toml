@@ -1,6 +1,6 @@
-author = "Keichi Takahashi"
+author = "Abdel Benamrouche, based on Keichi Takahashi's Vienna theme"
 description = "Simple and clean blog theme for hugo"
 license = "MIT"
-name = "vienna"
-source_repo = "git@github.com:keichi/vienna.git"
+name = "hugo-unxp"
+source_repo = "https://github.com/abdel-unxp/hugo-theme-unxp.git"
 tags = ["blog", "tags", "bootstrap"]
