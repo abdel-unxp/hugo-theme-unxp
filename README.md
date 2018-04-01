@@ -42,9 +42,12 @@ copyright = "&copy; Copyright notice"
     # footer.
     twitter = "Your Twitter username"
     github = "Your GitHub username"
+    gitlab = "Your GitLab username"
     linkedin = "Your LinkedIn username"
     googleplus = "Your Google+ user id"
     facebook = "Your Facebook username"
+    reddit = "Your Reddit username"
+    hackernews = "Your Hacker News username"
     stackoverflow = "Your Stackoverflow user id (number)"
     keybase = "Your keybase.io username"
     instagram = "Your Instagram username"
@@ -61,6 +64,13 @@ copyright = "&copy; Copyright notice"
     # Short subtitle/tagline. This is displayed in the header.
     subtitle = "Short subtitle/tagline of your blog"
     themecolor = "#hexcolor" # Defines the tab color in Chrome for Android.
+```
+
+You may specify following options in `front matter` of your posts to make use of
+this theme's features.
+
+```toml
+noshowdate = true # This will ensure that the date is not printed
 ```
 
 ## Usage
