@@ -7,5 +7,17 @@
   {{ .Render "li" }}
   {{ end }}
 </section>
+
+{{ if .IsTranslated }}
+<h4>{{ i18n "translations" }}</h4>
+<ul>
+  {{ range .Translations }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }}{{ end }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+
 {{ partial "footer.html" . }}
 

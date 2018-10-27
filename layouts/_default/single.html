@@ -22,6 +22,18 @@
   </header>
   <section>
     {{ .Content }}
+
+   {{ if .IsTranslated }}
+   <h4>{{ i18n "translations" }}</h4>
+   <ul>
+     {{ range .Translations }}
+     <li>
+       <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }}{{ end }}</a>
+     </li>
+     {{ end }}
+   </ul>
+   {{ end }}
+
   </section>
   <footer>
     {{ if (isset .Params "nocomments")  }}
