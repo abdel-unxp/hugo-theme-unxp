@@ -1,7 +1,3 @@
-main {
-    max-width: 750px;
-    word-wrap: break-word;
-}
 
 /* Header */
 
@@ -14,8 +10,6 @@ main {
     position: relative;
     padding-bottom: 1px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .header-text .tag-line {
@@ -279,6 +273,7 @@ blockquote {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Source Sans Pro", "Kozuka Gothic Pr6N", Meiryo, sans-serif !important;
+    font-weight: bold;
 }
 
 article section img {

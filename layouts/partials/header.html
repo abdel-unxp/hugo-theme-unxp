@@ -31,6 +31,9 @@
 
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css" />
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
+      {{ if (eq .URL "/post/") | or (eq .URL "/*/post/") }}
+          <link rel="stylesheet" href="{{ .Site.BaseURL }}css/blog.css" />
+      {{ end }}
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css" />
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/github.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
@@ -50,12 +53,24 @@
       </div>
       {{ end }}
       {{ partial "link.html" . }}
-      {{ if ne .URL "/" }}
+
+      {{ if (eq .URL "/post/") | or (eq .URL "/*/post/") }}
       <a href="{{ .Site.BaseURL }}" class="btn-header btn-back hidden-xs">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         &nbsp;Home
       </a>
+      {{ else }}
+      {{ if ne .Lang "en" }}
+      <a href="{{ .Site.BaseURL }}/{{ .Lang }}/post/" class="btn-header btn-back hidden-xs">
+      {{ else }}
+      <a href="{{ .Site.BaseURL }}/post/" class="btn-header btn-back hidden-xs">
       {{ end }}
+        <i aria-hidden="true"></i>
+        &nbsp;Blog
+      </a>
+      {{ end }}
+
+
       {{ with .RSSLink }}
       <a href="{{ . }}" class="btn-header btn-subscribe hidden-xs">
         <i class="fa fa-rss" aria-hidden="true"></i>
