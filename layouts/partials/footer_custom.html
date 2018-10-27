@@ -1,0 +1,10 @@
+{{- if .Site.Params.staticman -}}
+<link rel="stylesheet" href="{{ "css/dan_staticman.css" | absURL }}" />
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="{{ "js/staticman.js" | absURL }}"></script>
+<script src="{{ "js/staticman_oc.js" | absURL }}"></script>
+{{- end -}}
+{{- if .Site.Params.staticman.recaptcha -}}
+<script src='https://www.google.com/recaptcha/api.js'></script>
+{{- end -}}
+

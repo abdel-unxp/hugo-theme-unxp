@@ -38,6 +38,11 @@
   <footer>
     {{ if (isset .Params "nocomments")  }}
     {{ else }}
+    {{ with .Site.Params.staticman }}
+        {{ partial "staticman_form" . }}
+        {{ partial "staticman_show" . }}
+    {{ end }}
+
     {{ with .Site.Params.disqus }}
     <hr/>
     <div id="disqus_thread"></div>
